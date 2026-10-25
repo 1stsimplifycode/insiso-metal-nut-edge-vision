@@ -1,0 +1,260 @@
+{
+  "label": "local-laptop Ryzen5-5600H",
+  "timestamp": "2026-10-25T18:37:50",
+  "system": {
+    "cpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+    "logical_cores": 12,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10",
+    "onnxruntime": "1.31.0",
+    "machine": "AMD64",
+    "in_colab": false,
+    "physical_cores": 6,
+    "ram_gb": 7.4,
+    "cpu_freq_mhz_max": 3301.0
+  },
+  "model": "models\\baseline.onnx",
+  "model_bytes": 10663467,
+  "model_input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "source_image_resolution": "700x700",
+  "batch_size": 1,
+  "warmup_iters": 20,
+  "measured_iters": 200,
+  "n_distinct_images": 69,
+  "execution_provider": "CPUExecutionProvider",
+  "graph_optimization": "all",
+  "results_by_threads": {
+    "default": {
+      "load": {
+        "mean_ms": 10.497,
+        "median_ms": 10.076,
+        "p95_ms": 11.967,
+        "p99_ms": 13.571,
+        "std_ms": 1.456,
+        "min_ms": 9.322
+      },
+      "preprocess": {
+        "mean_ms": 4.697,
+        "median_ms": 4.412,
+        "p95_ms": 5.708,
+        "p99_ms": 8.829,
+        "std_ms": 1.701,
+        "min_ms": 3.784
+      },
+      "inference": {
+        "mean_ms": 40.594,
+        "median_ms": 40.206,
+        "p95_ms": 48.866,
+        "p99_ms": 63.407,
+        "std_ms": 6.338,
+        "min_ms": 30.572
+      },
+      "postprocess": {
+        "mean_ms": 0.327,
+        "median_ms": 0.268,
+        "p95_ms": 0.568,
+        "p99_ms": 0.727,
+        "std_ms": 0.145,
+        "min_ms": 0.182
+      },
+      "end_to_end": {
+        "mean_ms": 56.116,
+        "median_ms": 55.237,
+        "p95_ms": 66.525,
+        "p99_ms": 86.129,
+        "std_ms": 8.55,
+        "min_ms": 45.106
+      },
+      "model_only_throughput_img_per_s": 24.63,
+      "end_to_end_throughput_img_per_s": 17.82,
+      "intra_op_threads": "ORT default"
+    },
+    "1": {
+      "load": {
+        "mean_ms": 8.975,
+        "median_ms": 8.836,
+        "p95_ms": 9.679,
+        "p99_ms": 11.202,
+        "std_ms": 0.572,
+        "min_ms": 8.327
+      },
+      "preprocess": {
+        "mean_ms": 4.195,
+        "median_ms": 4.021,
+        "p95_ms": 5.345,
+        "p99_ms": 6.305,
+        "std_ms": 0.572,
+        "min_ms": 3.431
+      },
+      "inference": {
+        "mean_ms": 82.9,
+        "median_ms": 80.771,
+        "p95_ms": 94.197,
+        "p99_ms": 103.574,
+        "std_ms": 6.062,
+        "min_ms": 77.701
+      },
+      "postprocess": {
+        "mean_ms": 0.305,
+        "median_ms": 0.248,
+        "p95_ms": 0.503,
+        "p99_ms": 0.625,
+        "std_ms": 0.118,
+        "min_ms": 0.18
+      },
+      "end_to_end": {
+        "mean_ms": 96.375,
+        "median_ms": 94.19,
+        "p95_ms": 109.332,
+        "p99_ms": 119.515,
+        "std_ms": 6.625,
+        "min_ms": 90.36
+      },
+      "model_only_throughput_img_per_s": 12.06,
+      "end_to_end_throughput_img_per_s": 10.38,
+      "intra_op_threads": 1
+    },
+    "2": {
+      "load": {
+        "mean_ms": 9.927,
+        "median_ms": 10.175,
+        "p95_ms": 11.017,
+        "p99_ms": 11.462,
+        "std_ms": 0.845,
+        "min_ms": 8.452
+      },
+      "preprocess": {
+        "mean_ms": 4.442,
+        "median_ms": 4.361,
+        "p95_ms": 5.469,
+        "p99_ms": 6.223,
+        "std_ms": 0.589,
+        "min_ms": 3.586
+      },
+      "inference": {
+        "mean_ms": 62.785,
+        "median_ms": 61.226,
+        "p95_ms": 80.359,
+        "p99_ms": 85.17,
+        "std_ms": 11.783,
+        "min_ms": 47.57
+      },
+      "postprocess": {
+        "mean_ms": 0.341,
+        "median_ms": 0.272,
+        "p95_ms": 0.585,
+        "p99_ms": 0.627,
+        "std_ms": 0.135,
+        "min_ms": 0.184
+      },
+      "end_to_end": {
+        "mean_ms": 77.495,
+        "median_ms": 75.869,
+        "p95_ms": 95.483,
+        "p99_ms": 101.198,
+        "std_ms": 12.241,
+        "min_ms": 60.938
+      },
+      "model_only_throughput_img_per_s": 15.93,
+      "end_to_end_throughput_img_per_s": 12.9,
+      "intra_op_threads": 2
+    },
+    "4": {
+      "load": {
+        "mean_ms": 10.512,
+        "median_ms": 10.834,
+        "p95_ms": 11.639,
+        "p99_ms": 11.913,
+        "std_ms": 0.919,
+        "min_ms": 8.881
+      },
+      "preprocess": {
+        "mean_ms": 4.529,
+        "median_ms": 4.421,
+        "p95_ms": 5.647,
+        "p99_ms": 6.023,
+        "std_ms": 0.563,
+        "min_ms": 3.702
+      },
+      "inference": {
+        "mean_ms": 49.73,
+        "median_ms": 50.627,
+        "p95_ms": 55.001,
+        "p99_ms": 57.903,
+        "std_ms": 4.38,
+        "min_ms": 35.322
+      },
+      "postprocess": {
+        "mean_ms": 0.353,
+        "median_ms": 0.28,
+        "p95_ms": 0.638,
+        "p99_ms": 0.748,
+        "std_ms": 0.148,
+        "min_ms": 0.182
+      },
+      "end_to_end": {
+        "mean_ms": 65.124,
+        "median_ms": 66.135,
+        "p95_ms": 71.425,
+        "p99_ms": 73.735,
+        "std_ms": 4.728,
+        "min_ms": 49.031
+      },
+      "model_only_throughput_img_per_s": 20.11,
+      "end_to_end_throughput_img_per_s": 15.36,
+      "intra_op_threads": 4
+    },
+    "6": {
+      "load": {
+        "mean_ms": 11.335,
+        "median_ms": 11.486,
+        "p95_ms": 12.364,
+        "p99_ms": 12.731,
+        "std_ms": 0.79,
+        "min_ms": 9.23
+      },
+      "preprocess": {
+        "mean_ms": 4.701,
+        "median_ms": 4.573,
+        "p95_ms": 5.523,
+        "p99_ms": 6.084,
+        "std_ms": 0.913,
+        "min_ms": 3.676
+      },
+      "inference": {
+        "mean_ms": 44.574,
+        "median_ms": 43.872,
+        "p95_ms": 50.608,
+        "p99_ms": 54.712,
+        "std_ms": 3.197,
+        "min_ms": 38.542
+      },
+      "postprocess": {
+        "mean_ms": 0.374,
+        "median_ms": 0.309,
+        "p95_ms": 0.609,
+        "p99_ms": 0.682,
+        "std_ms": 0.141,
+        "min_ms": 0.183
+      },
+      "end_to_end": {
+        "mean_ms": 60.985,
+        "median_ms": 60.175,
+        "p95_ms": 67.491,
+        "p99_ms": 71.984,
+        "std_ms": 4.122,
+        "min_ms": 53.509
+      },
+      "model_only_throughput_img_per_s": 22.43,
+      "end_to_end_throughput_img_per_s": 16.4,
+      "intra_op_threads": 6
+    }
+  },
+  "process_rss_mb_after": 86.6,
+  "process_rss_mb_delta": 47.5
+}

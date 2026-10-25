@@ -1,0 +1,5 @@
+{
+  "conf": 0.05,
+  "val_image_sensitivity": 1.0,
+  "rule": "lowest conf with zero val false rejects"
+}

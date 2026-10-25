@@ -1,0 +1,645 @@
+{
+  "conf_threshold": 0.05,
+  "iou_threshold": 0.5,
+  "n_images": 49,
+  "n_anomalous_images": 19,
+  "n_normal_images": 30,
+  "n_gt_boxes": 28,
+  "box": {
+    "tp": 20,
+    "fp": 10,
+    "fn": 8,
+    "precision": 0.6666666666666666,
+    "recall": 0.7142857142857143,
+    "f1": 0.689655172413793
+  },
+  "mAP50": 0.721993490557847,
+  "mAP50_95": 0.5119050909530786,
+  "ap_by_iou": {
+    "0.5": 0.721993490557847,
+    "0.55": 0.7119836983698371,
+    "0.6": 0.6972125784006974,
+    "0.65": 0.6972125784006974,
+    "0.7": 0.6590008237887035,
+    "0.75": 0.6590008237887035,
+    "0.8": 0.44620762683555804,
+    "0.85": 0.36066842658817644,
+    "0.9": 0.14992927864214992,
+    "0.95": 0.015841584158415842
+  },
+  "image": {
+    "defective_flagged": 19,
+    "defective_total": 19,
+    "sensitivity": 1.0,
+    "normal_flagged": 0,
+    "normal_total": 30,
+    "false_positive_rate": 0.0,
+    "missed_defective_images": 0
+  },
+  "fp_boxes_per_normal_image": 0.0,
+  "per_category": {
+    "bent": {
+      "gt_boxes": 8,
+      "tp_boxes": 4,
+      "images": 5,
+      "flagged": 5,
+      "box_recall": 0.5,
+      "image_flag_rate": 1.0
+    },
+    "color": {
+      "gt_boxes": 4,
+      "tp_boxes": 4,
+      "images": 4,
+      "flagged": 4,
+      "box_recall": 1.0,
+      "image_flag_rate": 1.0
+    },
+    "flip": {
+      "gt_boxes": 5,
+      "tp_boxes": 5,
+      "images": 5,
+      "flagged": 5,
+      "box_recall": 1.0,
+      "image_flag_rate": 1.0
+    },
+    "good": {
+      "gt_boxes": 0,
+      "tp_boxes": 0,
+      "images": 30,
+      "flagged": 0,
+      "box_recall": null,
+      "image_flag_rate": 0.0
+    },
+    "scratch": {
+      "gt_boxes": 11,
+      "tp_boxes": 7,
+      "images": 5,
+      "flagged": 5,
+      "box_recall": 0.6363636363636364,
+      "image_flag_rate": 1.0
+    }
+  },
+  "per_image": [
+    {
+      "id": "test_bent_001",
+      "category": "bent",
+      "n_gt": 1,
+      "n_pred": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.6604093909263611
+    },
+    {
+      "id": "test_bent_011",
+      "category": "bent",
+      "n_gt": 1,
+      "n_pred": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.6262772083282471
+    },
+    {
+      "id": "test_bent_015",
+      "category": "bent",
+      "n_gt": 4,
+      "n_pred": 2,
+      "tp": 0,
+      "fp": 2,
+      "fn": 4,
+      "flagged": true,
+      "max_score": 0.8030256032943726
+    },
+    {
+      "id": "test_bent_017",
+      "category": "bent",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.8665534257888794
+    },
+    {
+      "id": "test_bent_021",
+      "category": "bent",
+      "n_gt": 1,
+      "n_pred": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7585247159004211
+    },
+    {
+      "id": "test_color_001",
+      "category": "color",
+      "n_gt": 1,
+      "n_pred": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.6277559995651245
+    },
+    {
+      "id": "test_color_006",
+      "category": "color",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7858774065971375
+    },
+    {
+      "id": "test_color_009",
+      "category": "color",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.755418062210083
+    },
+    {
+      "id": "test_color_016",
+      "category": "color",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.8463948369026184
+    },
+    {
+      "id": "test_flip_004",
+      "category": "flip",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7810179591178894
+    },
+    {
+      "id": "test_flip_010",
+      "category": "flip",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7259113788604736
+    },
+    {
+      "id": "test_flip_013",
+      "category": "flip",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7641873955726624
+    },
+    {
+      "id": "test_flip_014",
+      "category": "flip",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7964239120483398
+    },
+    {
+      "id": "test_flip_021",
+      "category": "flip",
+      "n_gt": 1,
+      "n_pred": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7863828539848328
+    },
+    {
+      "id": "test_good_005",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "test_good_012",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "test_good_021",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "test_scratch_003",
+      "category": "scratch",
+      "n_gt": 1,
+      "n_pred": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.9165723919868469
+    },
+    {
+      "id": "test_scratch_004",
+      "category": "scratch",
+      "n_gt": 4,
+      "n_pred": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 4,
+      "flagged": true,
+      "max_score": 0.17169693112373352
+    },
+    {
+      "id": "test_scratch_010",
+      "category": "scratch",
+      "n_gt": 2,
+      "n_pred": 3,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.8041539788246155
+    },
+    {
+      "id": "test_scratch_016",
+      "category": "scratch",
+      "n_gt": 2,
+      "n_pred": 3,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.7766280174255371
+    },
+    {
+      "id": "test_scratch_018",
+      "category": "scratch",
+      "n_gt": 2,
+      "n_pred": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "flagged": true,
+      "max_score": 0.8514332175254822
+    },
+    {
+      "id": "train_good_003",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_010",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_015",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_018",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_025",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_026",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_048",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_058",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_066",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_072",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_088",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_103",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_104",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_105",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_106",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_109",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_113",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_118",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_123",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_127",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_144",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_146",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_147",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_175",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_176",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_195",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    },
+    {
+      "id": "train_good_203",
+      "category": "good",
+      "n_gt": 0,
+      "n_pred": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "flagged": false,
+      "max_score": 0.0
+    }
+  ],
+  "recall_by_size": {
+    "large(>=150px)": {
+      "gt": 13,
+      "tp": 11,
+      "recall": 0.8461538461538461
+    },
+    "medium(50-150px)": {
+      "gt": 12,
+      "tp": 9,
+      "recall": 0.75
+    },
+    "small(<50px)": {
+      "gt": 3,
+      "tp": 0,
+      "recall": 0.0
+    }
+  },
+  "model": "models\\improvement.pt",
+  "split": "val",
+  "threshold_source": "selected on val (lowest conf with zero false rejects)",
+  "imgsz": 640,
+  "gt_reference": "baseline"
+}

@@ -1,0 +1,28 @@
+# Baseline: YOLO11n, single class "defect", per-connected-component boxes, framework-default augmentation.
+name: baseline
+data: data/yolo/baseline/dataset.yaml
+model: yolo11n.pt          # COCO-pretrained
+seed: 0
+deterministic: true
+epochs: 150
+patience: 40               # early stopping on val fitness (0.1*mAP50 + 0.9*mAP50-95)
+batch: 16
+imgsz: 640
+optimizer: AdamW
+lr0: 0.001
+weight_decay: 0.0005
+cos_lr: false
+workers: 2
+# augmentation (Ultralytics defaults, written out so experiments can diff them)
+augment:
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  fliplr: 0.5
+  flipud: 0.0
+  mosaic: 1.0
+  mixup: 0.0
+  close_mosaic: 10

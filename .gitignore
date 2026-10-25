@@ -1,0 +1,24 @@
+﻿# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# MVTec AD data must be downloaded separately (CC BY-NC-SA 4.0; do not redistribute)
+data/
+# training run directories (large; summaries are copied into artifacts/ and reports/)
+runs/
+# raw .pt checkpoints are kept out of git; ONNX models are committed (small)
+models/*.pt
+yolo11n.pt
+yolo*.pt
+
+# per-image prediction dumps can be regenerated
+artifacts/eval/*_predictions.json
+
+# graph-identical to models/baseline.onnx (only export timestamp differs)
+models/variants/baseline_640.onnx
+# superseded / regenerable
+runs/
+artifacts/inspection/*.jpg

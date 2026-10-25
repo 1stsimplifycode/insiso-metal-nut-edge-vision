@@ -1,0 +1,82 @@
+{
+  "method": "PatchCore (WRN50 layer2+3, 256px, 10% greedy coreset)",
+  "device": "cuda",
+  "fit_images": 172,
+  "memory_bank": 17612,
+  "fit_seconds": 95.5,
+  "val": {
+    "image_auroc": 1.0,
+    "mean_ms_per_image_cuda": 54.0,
+    "at_val_threshold": {
+      "threshold": 2.6534535884857178,
+      "defective_flagged": 19,
+      "defective_total": 19,
+      "normal_flagged": 0,
+      "normal_total": 30,
+      "sensitivity": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "flagged_by_category": {
+      "bent": "5/5",
+      "color": "4/4",
+      "flip": "5/5",
+      "good": "0/30",
+      "scratch": "5/5"
+    },
+    "at_recall_first_threshold": {
+      "threshold": 2.0746331398963926,
+      "defective_flagged": 19,
+      "defective_total": 19,
+      "normal_flagged": 0,
+      "normal_total": 30,
+      "flagged_by_category": {
+        "bent": "5/5",
+        "color": "4/4",
+        "flip": "5/5",
+        "good": "0/30",
+        "scratch": "5/5"
+      }
+    }
+  },
+  "threshold_rule": "max image-level F1 on val",
+  "test": {
+    "image_auroc": 0.9956896551724137,
+    "mean_ms_per_image_cuda": 52.0,
+    "at_val_threshold": {
+      "threshold": 2.6534535884857178,
+      "defective_flagged": 24,
+      "defective_total": 29,
+      "normal_flagged": 0,
+      "normal_total": 40,
+      "sensitivity": 0.8275862068965517,
+      "false_positive_rate": 0.0
+    },
+    "flagged_by_category": {
+      "bent": "7/8",
+      "color": "6/7",
+      "flip": "7/7",
+      "good": "0/40",
+      "scratch": "4/7"
+    },
+    "at_recall_first_threshold": {
+      "threshold": 2.0746331398963926,
+      "defective_flagged": 29,
+      "defective_total": 29,
+      "normal_flagged": 4,
+      "normal_total": 40,
+      "flagged_by_category": {
+        "bent": "8/8",
+        "color": "7/7",
+        "flip": "7/7",
+        "good": "4/40",
+        "scratch": "7/7"
+      }
+    },
+    "score_range_note": {
+      "val_max_good": 2.07442569732666,
+      "test_max_good": 2.282416820526123,
+      "test_min_defective": 2.2056021690368652
+    }
+  },
+  "recall_first_rule": "threshold just above the highest val good-part score (val only)"
+}

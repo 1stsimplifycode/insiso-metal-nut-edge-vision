@@ -1,0 +1,57 @@
+{
+  "onnx_path": "models\\baseline.onnx",
+  "source_checkpoint": "models\\baseline.pt",
+  "checkpoint_sha256": "847e97e8db73ccb34c828c3bc08a8767356636096baf209cde7c88bccdf11a98",
+  "onnx_sha256": "6b8d1c5d78dfd9de949fcea0533a29dbb1215819e5039fa17d3eee48ac0b100f",
+  "onnx_bytes": 10663467,
+  "export_call": "YOLO('models/baseline.pt').export(format='onnx', imgsz=640, opset=17, simplify=True, dynamic=False, nms=False, half=False)",
+  "opset": 17,
+  "inputs": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output0",
+      "shape": [
+        1,
+        5,
+        8400
+      ]
+    }
+  ],
+  "metadata": {
+    "description": "Ultralytics YOLO11n model trained on C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\dataset.yaml",
+    "author": "Ultralytics",
+    "date": "2026-10-25T19:46:23.126975+05:30",
+    "version": "8.4.188",
+    "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+    "docs": "https://docs.ultralytics.com",
+    "stride": "32",
+    "task": "detect",
+    "head": "Detect",
+    "batch": "1",
+    "imgsz": "[640, 640]",
+    "names": "{0: 'defect'}",
+    "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': False, 'dynamic': False, 'simplify': True, 'opset': 17}",
+    "channels": "3",
+    "end2end": "False"
+  },
+  "ort_providers": [
+    "CPUExecutionProvider"
+  ],
+  "preprocessing": "BGR->RGB, letterbox to imgsz x imgsz (aspect kept, pad value 114, centred), HWC->NCHW, float32 / 255",
+  "output_layout": "(1, 4+nc, N): rows 0-3 = cx,cy,w,h in letterboxed pixels; rows 4.. = per-class sigmoid scores",
+  "postprocessing": "not in graph: confidence filter, class-aware NMS (IoU 0.7), un-letterbox \u2014 see src/inference/onnx_detector.py",
+  "ultralytics": "8.4.188",
+  "onnx": "1.23.2",
+  "onnxruntime": "1.31.0"
+}

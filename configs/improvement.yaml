@@ -1,0 +1,7 @@
+# E2 (controlled): identical to baseline EXCEPT the annotation policy.
+# Mask components within 20 px of each other are merged into one box (data/yolo/merged20),
+# motivated by the baseline failure analysis: all 4 hard misses were secondary mask fragments,
+# and the extra FP boxes at the recall-first operating point were fragment/localisation mismatches.
+base: baseline.yaml
+name: improvement
+data: data/yolo/merged20/dataset.yaml

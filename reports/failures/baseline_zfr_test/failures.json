@@ -1,0 +1,624 @@
+{
+  "conf": 0.11,
+  "cases": [
+    {
+      "id": "test_bent_005",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_bent_005.png",
+      "category": "bent",
+      "kind": "FN",
+      "error_type": "below_threshold",
+      "gt_box": [
+        315.0,
+        576.99985,
+        416.0002,
+        630.99995
+      ],
+      "best_iou_at_op": 0.0,
+      "conf": 0.09213802963495255,
+      "image_flagged": true,
+      "box_wh_px": [
+        101,
+        54
+      ],
+      "region_contrast_gray": 13.3,
+      "n_gt_boxes_in_image": 2,
+      "panel": "00_test_bent_005_FN.jpg"
+    },
+    {
+      "id": "test_bent_010",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_bent_010.png",
+      "category": "bent",
+      "kind": "FN",
+      "error_type": "fragmentation_or_merged",
+      "gt_box": [
+        546.0,
+        304.0002,
+        584.0002000000001,
+        398.00039999999996
+      ],
+      "best_iou_at_op": 0.11935816846720808,
+      "conf": 0.5525460839271545,
+      "image_flagged": true,
+      "box_wh_px": [
+        38,
+        94
+      ],
+      "region_contrast_gray": 1.5,
+      "n_gt_boxes_in_image": 3,
+      "panel": "01_test_bent_010_FN.jpg"
+    },
+    {
+      "id": "test_bent_010",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_bent_010.png",
+      "category": "bent",
+      "kind": "FN",
+      "error_type": "fragmentation_or_merged",
+      "gt_box": [
+        600.0001,
+        401.00025,
+        610.9999,
+        420.00034999999997
+      ],
+      "best_iou_at_op": 0.006983580787623847,
+      "conf": 0.5525460839271545,
+      "image_flagged": true,
+      "box_wh_px": [
+        11,
+        19
+      ],
+      "region_contrast_gray": 12.1,
+      "n_gt_boxes_in_image": 3,
+      "panel": "02_test_bent_010_FN.jpg"
+    },
+    {
+      "id": "test_bent_012",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_bent_012.png",
+      "category": "bent",
+      "kind": "FN",
+      "error_type": "below_threshold",
+      "gt_box": [
+        569.00025,
+        477.99989999999997,
+        595.9999499999999,
+        530.0001
+      ],
+      "best_iou_at_op": 0.020503274292947203,
+      "conf": 0.0012207231484353542,
+      "image_flagged": true,
+      "box_wh_px": [
+        27,
+        52
+      ],
+      "region_contrast_gray": 6.2,
+      "n_gt_boxes_in_image": 2,
+      "panel": "03_test_bent_012_FN.jpg"
+    },
+    {
+      "id": "test_bent_019",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_bent_019.png",
+      "category": "bent",
+      "kind": "FP",
+      "error_type": "duplicate",
+      "pred_box": [
+        559.6538696289062,
+        276.2294006347656,
+        677.0149536132812,
+        557.3320922851562
+      ],
+      "conf": 0.5834790468215942,
+      "best_iou_at_op": 0.6677375333965783,
+      "image_flagged": true,
+      "box_wh_px": [
+        117,
+        281
+      ],
+      "region_contrast_gray": 9.0,
+      "n_gt_boxes_in_image": 1,
+      "panel": "04_test_bent_019_FP.jpg"
+    },
+    {
+      "id": "test_color_004",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_004.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "fragmentation_or_merged",
+      "pred_box": [
+        226.16421508789062,
+        272.3843078613281,
+        275.06793212890625,
+        309.16925048828125
+      ],
+      "conf": 0.2744355797767639,
+      "best_iou_at_op": 0.16060729259118584,
+      "image_flagged": true,
+      "box_wh_px": [
+        49,
+        37
+      ],
+      "region_contrast_gray": 4.6,
+      "n_gt_boxes_in_image": 1,
+      "panel": "05_test_color_004_FP.jpg"
+    },
+    {
+      "id": "test_color_007",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_007.png",
+      "category": "color",
+      "kind": "FN",
+      "error_type": "missed",
+      "gt_box": [
+        448.0,
+        305.99975,
+        458.0002,
+        317.99985
+      ],
+      "best_iou_at_op": 0.006380638966686582,
+      "conf": 0.9060625433921814,
+      "image_flagged": true,
+      "box_wh_px": [
+        10,
+        12
+      ],
+      "region_contrast_gray": 3.7,
+      "n_gt_boxes_in_image": 2,
+      "panel": "06_test_color_007_FN.jpg"
+    },
+    {
+      "id": "test_color_011",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_011.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "duplicate",
+      "pred_box": [
+        313.8849182128906,
+        46.28867721557617,
+        497.1392517089844,
+        271.26605224609375
+      ],
+      "conf": 0.5043365359306335,
+      "best_iou_at_op": 0.6324016942356151,
+      "image_flagged": true,
+      "box_wh_px": [
+        183,
+        225
+      ],
+      "region_contrast_gray": 11.7,
+      "n_gt_boxes_in_image": 2,
+      "panel": "07_test_color_011_FP.jpg"
+    },
+    {
+      "id": "test_color_014",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_014.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "localisation",
+      "pred_box": [
+        488.92022705078125,
+        153.3057403564453,
+        648.4096069335938,
+        350.97991943359375
+      ],
+      "conf": 0.4726489782333374,
+      "best_iou_at_op": 0.4083502956162476,
+      "image_flagged": true,
+      "box_wh_px": [
+        159,
+        198
+      ],
+      "region_contrast_gray": 26.1,
+      "n_gt_boxes_in_image": 1,
+      "panel": "08_test_color_014_FP.jpg"
+    },
+    {
+      "id": "test_color_015",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_015.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "duplicate",
+      "pred_box": [
+        214.92750549316406,
+        122.00669860839844,
+        619.6773071289062,
+        390.8381652832031
+      ],
+      "conf": 0.43841251730918884,
+      "best_iou_at_op": 0.5244213346695282,
+      "image_flagged": true,
+      "box_wh_px": [
+        405,
+        269
+      ],
+      "region_contrast_gray": 1.3,
+      "n_gt_boxes_in_image": 1,
+      "panel": "09_test_color_015_FP.jpg"
+    },
+    {
+      "id": "test_color_015",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_015.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "duplicate",
+      "pred_box": [
+        214.93649291992188,
+        149.2226104736328,
+        584.3365478515625,
+        309.3896179199219
+      ],
+      "conf": 0.39658817648887634,
+      "best_iou_at_op": 0.5246625308719082,
+      "image_flagged": true,
+      "box_wh_px": [
+        369,
+        160
+      ],
+      "region_contrast_gray": 9.0,
+      "n_gt_boxes_in_image": 1,
+      "panel": "10_test_color_015_FP.jpg"
+    },
+    {
+      "id": "test_color_015",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_015.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "spurious_on_defective",
+      "pred_box": [
+        546.2056884765625,
+        210.95132446289062,
+        598.3409423828125,
+        298.1672058105469
+      ],
+      "conf": 0.28995564579963684,
+      "best_iou_at_op": 0.0,
+      "image_flagged": true,
+      "box_wh_px": [
+        52,
+        87
+      ],
+      "region_contrast_gray": 37.9,
+      "n_gt_boxes_in_image": 1,
+      "panel": "11_test_color_015_FP.jpg"
+    },
+    {
+      "id": "test_color_017",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_017.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "fragmentation_or_merged",
+      "pred_box": [
+        307.4269104003906,
+        538.4630126953125,
+        319.9678955078125,
+        551.09619140625
+      ],
+      "conf": 0.31087854504585266,
+      "best_iou_at_op": 0.006067417159157988,
+      "image_flagged": true,
+      "box_wh_px": [
+        13,
+        13
+      ],
+      "region_contrast_gray": 41.4,
+      "n_gt_boxes_in_image": 1,
+      "panel": "12_test_color_017_FP.jpg"
+    },
+    {
+      "id": "test_color_019",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_019.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "duplicate",
+      "pred_box": [
+        509.3807373046875,
+        127.72628784179688,
+        597.6403198242188,
+        354.9652099609375
+      ],
+      "conf": 0.5251706838607788,
+      "best_iou_at_op": 0.5742264852497589,
+      "image_flagged": true,
+      "box_wh_px": [
+        88,
+        227
+      ],
+      "region_contrast_gray": 15.2,
+      "n_gt_boxes_in_image": 1,
+      "panel": "13_test_color_019_FP.jpg"
+    },
+    {
+      "id": "test_color_019",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_color_019.png",
+      "category": "color",
+      "kind": "FP",
+      "error_type": "spurious_on_defective",
+      "pred_box": [
+        436.0797424316406,
+        626.3385009765625,
+        500.6722717285156,
+        672.5654296875
+      ],
+      "conf": 0.38092920184135437,
+      "best_iou_at_op": 0.0,
+      "image_flagged": true,
+      "box_wh_px": [
+        65,
+        46
+      ],
+      "region_contrast_gray": 4.5,
+      "n_gt_boxes_in_image": 1,
+      "panel": "14_test_color_019_FP.jpg"
+    },
+    {
+      "id": "test_scratch_009",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_scratch_009.png",
+      "category": "scratch",
+      "kind": "FP",
+      "error_type": "fragmentation_or_merged",
+      "pred_box": [
+        239.2149200439453,
+        160.61029052734375,
+        298.892333984375,
+        207.44566345214844
+      ],
+      "conf": 0.6543206572532654,
+      "best_iou_at_op": 0.05110366596434753,
+      "image_flagged": true,
+      "box_wh_px": [
+        60,
+        47
+      ],
+      "region_contrast_gray": 7.1,
+      "n_gt_boxes_in_image": 3,
+      "panel": "15_test_scratch_009_FP.jpg"
+    },
+    {
+      "id": "test_scratch_009",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_scratch_009.png",
+      "category": "scratch",
+      "kind": "FP",
+      "error_type": "fragmentation_or_merged",
+      "pred_box": [
+        236.779052734375,
+        138.2752685546875,
+        299.7391052246094,
+        208.46095275878906
+      ],
+      "conf": 0.3557009994983673,
+      "best_iou_at_op": 0.08079448133980774,
+      "image_flagged": true,
+      "box_wh_px": [
+        63,
+        70
+      ],
+      "region_contrast_gray": 10.1,
+      "n_gt_boxes_in_image": 3,
+      "panel": "16_test_scratch_009_FP.jpg"
+    },
+    {
+      "id": "test_scratch_012",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_scratch_012.png",
+      "category": "scratch",
+      "kind": "FN",
+      "error_type": "fragmentation_or_merged",
+      "gt_box": [
+        578.00015,
+        288.99989999999997,
+        629.00005,
+        393.99989999999997
+      ],
+      "best_iou_at_op": 0.07952362835301519,
+      "conf": 0.46987685561180115,
+      "image_flagged": true,
+      "box_wh_px": [
+        51,
+        105
+      ],
+      "region_contrast_gray": 5.0,
+      "n_gt_boxes_in_image": 2,
+      "panel": "17_test_scratch_012_FN.jpg"
+    },
+    {
+      "id": "test_scratch_012",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_scratch_012.png",
+      "category": "scratch",
+      "kind": "FP",
+      "error_type": "fragmentation_or_merged",
+      "pred_box": [
+        429.0843811035156,
+        260.9631042480469,
+        664.887939453125,
+        546.5327758789062
+      ],
+      "conf": 0.46987685561180115,
+      "best_iou_at_op": 0.32341190710181494,
+      "image_flagged": true,
+      "box_wh_px": [
+        236,
+        286
+      ],
+      "region_contrast_gray": 33.2,
+      "n_gt_boxes_in_image": 2,
+      "panel": "18_test_scratch_012_FP.jpg"
+    },
+    {
+      "id": "test_scratch_012",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_scratch_012.png",
+      "category": "scratch",
+      "kind": "FP",
+      "error_type": "fragmentation_or_merged",
+      "pred_box": [
+        429.9659118652344,
+        411.8322448730469,
+        577.4524536132812,
+        550.445068359375
+      ],
+      "conf": 0.17655594646930695,
+      "best_iou_at_op": 0.12836238302151487,
+      "image_flagged": true,
+      "box_wh_px": [
+        147,
+        139
+      ],
+      "region_contrast_gray": 11.4,
+      "n_gt_boxes_in_image": 2,
+      "panel": "19_test_scratch_012_FP.jpg"
+    },
+    {
+      "id": "test_scratch_013",
+      "image": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\data\\yolo\\baseline\\images\\test\\test_scratch_013.png",
+      "category": "scratch",
+      "kind": "FP",
+      "error_type": "duplicate",
+      "pred_box": [
+        346.6804504394531,
+        450.5319519042969,
+        458.2337646484375,
+        650.39794921875
+      ],
+      "conf": 0.5708881616592407,
+      "best_iou_at_op": 0.7245844006917288,
+      "image_flagged": true,
+      "box_wh_px": [
+        112,
+        200
+      ],
+      "region_contrast_gray": 17.0,
+      "n_gt_boxes_in_image": 2,
+      "panel": "20_test_scratch_013_FP.jpg"
+    }
+  ],
+  "image_level": [],
+  "threshold_sensitivity": [
+    {
+      "conf": 0.05,
+      "box_P": 0.6363636363636364,
+      "box_R": 0.875,
+      "img_sens": "29/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.1,
+      "box_P": 0.6938775510204082,
+      "box_R": 0.85,
+      "img_sens": "29/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.15,
+      "box_P": 0.6938775510204082,
+      "box_R": 0.85,
+      "img_sens": "29/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.2,
+      "box_P": 0.7083333333333334,
+      "box_R": 0.85,
+      "img_sens": "29/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.25,
+      "box_P": 0.7083333333333334,
+      "box_R": 0.85,
+      "img_sens": "29/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.3,
+      "box_P": 0.7391304347826086,
+      "box_R": 0.85,
+      "img_sens": "29/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.35,
+      "box_P": 0.75,
+      "box_R": 0.825,
+      "img_sens": "28/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.4,
+      "box_P": 0.8048780487804879,
+      "box_R": 0.825,
+      "img_sens": "28/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.45,
+      "box_P": 0.8205128205128205,
+      "box_R": 0.8,
+      "img_sens": "28/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.5,
+      "box_P": 0.8648648648648649,
+      "box_R": 0.8,
+      "img_sens": "27/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.55,
+      "box_P": 0.9142857142857143,
+      "box_R": 0.8,
+      "img_sens": "27/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.6,
+      "box_P": 0.967741935483871,
+      "box_R": 0.75,
+      "img_sens": "26/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.65,
+      "box_P": 0.967741935483871,
+      "box_R": 0.75,
+      "img_sens": "26/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.7,
+      "box_P": 1.0,
+      "box_R": 0.65,
+      "img_sens": "23/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.75,
+      "box_P": 1.0,
+      "box_R": 0.625,
+      "img_sens": "23/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.8,
+      "box_P": 1.0,
+      "box_R": 0.575,
+      "img_sens": "21/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.85,
+      "box_P": 1.0,
+      "box_R": 0.425,
+      "img_sens": "16/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.9,
+      "box_P": 1.0,
+      "box_R": 0.35,
+      "img_sens": "13/29",
+      "img_fpr": "0/40"
+    },
+    {
+      "conf": 0.95,
+      "box_P": 1.0,
+      "box_R": 0.2,
+      "img_sens": "8/29",
+      "img_fpr": "0/40"
+    }
+  ]
+}

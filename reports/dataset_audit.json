@@ -1,0 +1,61 @@
+{
+  "total_images": 335,
+  "normal_images": 242,
+  "anomalous_images": 93,
+  "per_folder": {
+    "test/bent": 25,
+    "test/color": 22,
+    "test/flip": 23,
+    "test/good": 22,
+    "test/scratch": 23,
+    "train/good": 220
+  },
+  "defect_categories": [
+    "bent",
+    "color",
+    "flip",
+    "scratch"
+  ],
+  "image_shapes": {
+    "700x700x3": 335
+  },
+  "mask_shapes": {
+    "700x700x1": 93
+  },
+  "mask_value_sets": {
+    "(0, 255)": 93
+  },
+  "mask_area_fraction": {
+    "bent": {
+      "min": 0.007057142857142857,
+      "median": 0.018728571428571428,
+      "max": 0.04698979591836735
+    },
+    "color": {
+      "min": 0.004357142857142857,
+      "median": 0.02090204081632653,
+      "max": 0.06568979591836735
+    },
+    "flip": {
+      "min": 0.4784673469387755,
+      "median": 0.4817265306122449,
+      "max": 0.48724693877551023
+    },
+    "scratch": {
+      "min": 0.018983673469387754,
+      "median": 0.05536530612244898,
+      "max": 0.12301020408163266
+    }
+  },
+  "problems": [],
+  "exact_duplicate_groups": [],
+  "dhash_bits": 256,
+  "dhash_pairwise_hamming": {
+    "min": 19,
+    "p1": 37.0,
+    "median": 82.0
+  },
+  "near_duplicate_threshold": 4,
+  "near_duplicate_pairs": [],
+  "imbalance_normal_to_anomalous": 2.6
+}

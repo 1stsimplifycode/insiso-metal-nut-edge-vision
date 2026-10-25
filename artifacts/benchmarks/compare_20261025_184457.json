@@ -1,0 +1,248 @@
+{
+  "label": "local-laptop Ryzen5-5600H interleaved",
+  "timestamp": "2026-10-25T18:44:55",
+  "system": {
+    "cpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+    "logical_cores": 12,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10",
+    "onnxruntime": "1.31.0",
+    "machine": "AMD64",
+    "in_colab": false,
+    "physical_cores": 6,
+    "ram_gb": 7.4,
+    "cpu_freq_mhz_max": 3301.0
+  },
+  "batch_size": 1,
+  "rounds": 5,
+  "iters_per_round": 60,
+  "warmup_per_round": 15,
+  "threads": "ORT default",
+  "execution_provider": "CPUExecutionProvider",
+  "results": {
+    "baseline_640": {
+      "onnx_bytes": 10663466,
+      "input": "640x640",
+      "model_ms_median_of_round_means": 58.64,
+      "model_ms_round_range": [
+        45.09,
+        68.56
+      ],
+      "e2e_ms_median_of_round_means": 77.58,
+      "e2e_ms_round_range": [
+        60.31,
+        88.67
+      ],
+      "pooled": {
+        "inference": {
+          "mean_ms": 57.516,
+          "median_ms": 52.403,
+          "p95_ms": 90.04,
+          "p99_ms": 125.57,
+          "std_ms": 17.008,
+          "min_ms": 35.736
+        },
+        "end_to_end": {
+          "mean_ms": 75.903,
+          "median_ms": 70.312,
+          "p95_ms": 114.029,
+          "p99_ms": 162.104,
+          "std_ms": 19.452,
+          "min_ms": 49.976
+        },
+        "load": {
+          "mean_ms": 12.192,
+          "median_ms": 11.995,
+          "p95_ms": 14.913,
+          "p99_ms": 19.006,
+          "std_ms": 1.674,
+          "min_ms": 9.328
+        },
+        "preprocess": {
+          "mean_ms": 5.737,
+          "median_ms": 5.196,
+          "p95_ms": 8.739,
+          "p99_ms": 13.742,
+          "std_ms": 1.952,
+          "min_ms": 3.808
+        },
+        "postprocess": {
+          "mean_ms": 0.459,
+          "median_ms": 0.403,
+          "p95_ms": 0.797,
+          "p99_ms": 1.271,
+          "std_ms": 0.278,
+          "min_ms": 0.18
+        }
+      }
+    },
+    "baseline_480": {
+      "onnx_bytes": 10589890,
+      "input": "480x480",
+      "model_ms_median_of_round_means": 25.16,
+      "model_ms_round_range": [
+        24.8,
+        27.25
+      ],
+      "e2e_ms_median_of_round_means": 40.07,
+      "e2e_ms_round_range": [
+        39.79,
+        42.4
+      ],
+      "pooled": {
+        "inference": {
+          "mean_ms": 25.856,
+          "median_ms": 24.816,
+          "p95_ms": 32.323,
+          "p99_ms": 44.728,
+          "std_ms": 4.777,
+          "min_ms": 18.885
+        },
+        "end_to_end": {
+          "mean_ms": 40.866,
+          "median_ms": 39.784,
+          "p95_ms": 49.822,
+          "p99_ms": 67.677,
+          "std_ms": 5.752,
+          "min_ms": 31.199
+        },
+        "load": {
+          "mean_ms": 12.093,
+          "median_ms": 11.792,
+          "p95_ms": 14.142,
+          "p99_ms": 16.985,
+          "std_ms": 1.63,
+          "min_ms": 9.195
+        },
+        "preprocess": {
+          "mean_ms": 2.591,
+          "median_ms": 2.391,
+          "p95_ms": 4.041,
+          "p99_ms": 5.656,
+          "std_ms": 0.734,
+          "min_ms": 1.875
+        },
+        "postprocess": {
+          "mean_ms": 0.325,
+          "median_ms": 0.29,
+          "p95_ms": 0.582,
+          "p99_ms": 0.716,
+          "std_ms": 0.18,
+          "min_ms": 0.127
+        }
+      }
+    },
+    "baseline_320": {
+      "onnx_bytes": 10537358,
+      "input": "320x320",
+      "model_ms_median_of_round_means": 10.71,
+      "model_ms_round_range": [
+        10.27,
+        11.61
+      ],
+      "e2e_ms_median_of_round_means": 24.0,
+      "e2e_ms_round_range": [
+        23.56,
+        25.85
+      ],
+      "pooled": {
+        "inference": {
+          "mean_ms": 10.956,
+          "median_ms": 10.445,
+          "p95_ms": 14.121,
+          "p99_ms": 17.175,
+          "std_ms": 1.991,
+          "min_ms": 8.399
+        },
+        "end_to_end": {
+          "mean_ms": 24.453,
+          "median_ms": 23.855,
+          "p95_ms": 28.611,
+          "p99_ms": 33.401,
+          "std_ms": 3.581,
+          "min_ms": 20.333
+        },
+        "load": {
+          "mean_ms": 11.883,
+          "median_ms": 11.637,
+          "p95_ms": 13.7,
+          "p99_ms": 15.563,
+          "std_ms": 1.684,
+          "min_ms": 9.403
+        },
+        "preprocess": {
+          "mean_ms": 1.356,
+          "median_ms": 1.232,
+          "p95_ms": 1.854,
+          "p99_ms": 3.86,
+          "std_ms": 0.565,
+          "min_ms": 1.004
+        },
+        "postprocess": {
+          "mean_ms": 0.257,
+          "median_ms": 0.232,
+          "p95_ms": 0.462,
+          "p99_ms": 0.562,
+          "std_ms": 0.164,
+          "min_ms": 0.091
+        }
+      }
+    },
+    "baseline_640_int8": {
+      "onnx_bytes": 3254698,
+      "input": "640x640",
+      "model_ms_median_of_round_means": 33.32,
+      "model_ms_round_range": [
+        30.49,
+        36.13
+      ],
+      "e2e_ms_median_of_round_means": 51.17,
+      "e2e_ms_round_range": [
+        47.41,
+        56.21
+      ],
+      "pooled": {
+        "inference": {
+          "mean_ms": 33.576,
+          "median_ms": 32.339,
+          "p95_ms": 41.692,
+          "p99_ms": 56.048,
+          "std_ms": 6.178,
+          "min_ms": 24.607
+        },
+        "end_to_end": {
+          "mean_ms": 51.739,
+          "median_ms": 50.052,
+          "p95_ms": 60.916,
+          "p99_ms": 86.919,
+          "std_ms": 8.644,
+          "min_ms": 40.683
+        },
+        "load": {
+          "mean_ms": 12.225,
+          "median_ms": 11.818,
+          "p95_ms": 14.211,
+          "p99_ms": 18.868,
+          "std_ms": 2.826,
+          "min_ms": 9.373
+        },
+        "preprocess": {
+          "mean_ms": 5.518,
+          "median_ms": 5.191,
+          "p95_ms": 8.12,
+          "p99_ms": 12.422,
+          "std_ms": 1.488,
+          "min_ms": 3.895
+        },
+        "postprocess": {
+          "mean_ms": 0.421,
+          "median_ms": 0.38,
+          "p95_ms": 0.722,
+          "p99_ms": 0.945,
+          "std_ms": 0.237,
+          "min_ms": 0.177
+        }
+      }
+    }
+  }
+}

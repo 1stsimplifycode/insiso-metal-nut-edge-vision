@@ -1,0 +1,5 @@
+{
+  "conf": 0.19,
+  "val_box_f1": 0.7692307692307692,
+  "rule": "max box-F1 on val"
+}

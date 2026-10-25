@@ -1,0 +1,6 @@
+# Challenge A: leave-one-defect-category-out. Identical to baseline, but every `scratch` image is
+# removed from train/val and evaluated only afterwards (split "unseen"). Category fixed before running.
+base: baseline.yaml
+name: loco_scratch
+data: data/yolo/loco_scratch/dataset.yaml
+workers: 0

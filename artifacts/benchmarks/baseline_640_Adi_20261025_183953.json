@@ -1,0 +1,80 @@
+{
+  "label": "variant baseline_640",
+  "timestamp": "2026-10-25T18:39:51",
+  "system": {
+    "cpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+    "logical_cores": 12,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10",
+    "onnxruntime": "1.31.0",
+    "machine": "AMD64",
+    "in_colab": false,
+    "physical_cores": 6,
+    "ram_gb": 7.4,
+    "cpu_freq_mhz_max": 3301.0
+  },
+  "model": "C:\\Users\\mailt\\Downloads\\insiso-metal-nut-edge-vision\\models\\variants\\baseline_640.onnx",
+  "model_bytes": 10663466,
+  "model_input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "source_image_resolution": "700x700",
+  "batch_size": 1,
+  "warmup_iters": 20,
+  "measured_iters": 150,
+  "n_distinct_images": 69,
+  "execution_provider": "CPUExecutionProvider",
+  "graph_optimization": "all",
+  "results_by_threads": {
+    "default": {
+      "load": {
+        "mean_ms": 28.446,
+        "median_ms": 27.607,
+        "p95_ms": 45.941,
+        "p99_ms": 56.881,
+        "std_ms": 9.66,
+        "min_ms": 13.1
+      },
+      "preprocess": {
+        "mean_ms": 17.643,
+        "median_ms": 15.759,
+        "p95_ms": 29.979,
+        "p99_ms": 43.456,
+        "std_ms": 8.443,
+        "min_ms": 7.027
+      },
+      "inference": {
+        "mean_ms": 188.857,
+        "median_ms": 176.37,
+        "p95_ms": 325.96,
+        "p99_ms": 447.302,
+        "std_ms": 69.441,
+        "min_ms": 100.103
+      },
+      "postprocess": {
+        "mean_ms": 0.754,
+        "median_ms": 0.494,
+        "p95_ms": 2.885,
+        "p99_ms": 4.222,
+        "std_ms": 0.848,
+        "min_ms": 0.25
+      },
+      "end_to_end": {
+        "mean_ms": 235.701,
+        "median_ms": 224.504,
+        "p95_ms": 371.784,
+        "p99_ms": 517.712,
+        "std_ms": 77.291,
+        "min_ms": 124.734
+      },
+      "model_only_throughput_img_per_s": 5.3,
+      "end_to_end_throughput_img_per_s": 4.24,
+      "intra_op_threads": "ORT default"
+    }
+  },
+  "process_rss_mb_after": 86.2,
+  "process_rss_mb_delta": 48.0
+}

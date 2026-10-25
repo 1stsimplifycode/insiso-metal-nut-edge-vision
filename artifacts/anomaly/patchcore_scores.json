@@ -1,0 +1,592 @@
+{
+  "test/bent/001": {
+    "split": "val",
+    "category": "bent",
+    "score": 2.819187641143799
+  },
+  "test/bent/011": {
+    "split": "val",
+    "category": "bent",
+    "score": 3.11496639251709
+  },
+  "test/bent/015": {
+    "split": "val",
+    "category": "bent",
+    "score": 2.6976492404937744
+  },
+  "test/bent/017": {
+    "split": "val",
+    "category": "bent",
+    "score": 3.0645878314971924
+  },
+  "test/bent/021": {
+    "split": "val",
+    "category": "bent",
+    "score": 3.0845248699188232
+  },
+  "test/color/001": {
+    "split": "val",
+    "category": "color",
+    "score": 2.6838691234588623
+  },
+  "test/color/006": {
+    "split": "val",
+    "category": "color",
+    "score": 2.67590594291687
+  },
+  "test/color/009": {
+    "split": "val",
+    "category": "color",
+    "score": 3.158328056335449
+  },
+  "test/color/016": {
+    "split": "val",
+    "category": "color",
+    "score": 2.7160961627960205
+  },
+  "test/flip/004": {
+    "split": "val",
+    "category": "flip",
+    "score": 3.160731792449951
+  },
+  "test/flip/010": {
+    "split": "val",
+    "category": "flip",
+    "score": 3.1404483318328857
+  },
+  "test/flip/013": {
+    "split": "val",
+    "category": "flip",
+    "score": 3.1674680709838867
+  },
+  "test/flip/014": {
+    "split": "val",
+    "category": "flip",
+    "score": 3.2641611099243164
+  },
+  "test/flip/021": {
+    "split": "val",
+    "category": "flip",
+    "score": 3.034827470779419
+  },
+  "test/good/005": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9969096183776855
+  },
+  "test/good/012": {
+    "split": "val",
+    "category": "good",
+    "score": 1.955276608467102
+  },
+  "test/good/021": {
+    "split": "val",
+    "category": "good",
+    "score": 1.8312466144561768
+  },
+  "test/scratch/003": {
+    "split": "val",
+    "category": "scratch",
+    "score": 2.6534535884857178
+  },
+  "test/scratch/004": {
+    "split": "val",
+    "category": "scratch",
+    "score": 2.8136119842529297
+  },
+  "test/scratch/010": {
+    "split": "val",
+    "category": "scratch",
+    "score": 2.663032293319702
+  },
+  "test/scratch/016": {
+    "split": "val",
+    "category": "scratch",
+    "score": 2.720322370529175
+  },
+  "test/scratch/018": {
+    "split": "val",
+    "category": "scratch",
+    "score": 3.049377918243408
+  },
+  "train/good/003": {
+    "split": "val",
+    "category": "good",
+    "score": 1.8879804611206055
+  },
+  "train/good/010": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9418689012527466
+  },
+  "train/good/015": {
+    "split": "val",
+    "category": "good",
+    "score": 1.8118668794631958
+  },
+  "train/good/018": {
+    "split": "val",
+    "category": "good",
+    "score": 1.7643308639526367
+  },
+  "train/good/025": {
+    "split": "val",
+    "category": "good",
+    "score": 1.7995914220809937
+  },
+  "train/good/026": {
+    "split": "val",
+    "category": "good",
+    "score": 1.7339690923690796
+  },
+  "train/good/048": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9320533275604248
+  },
+  "train/good/058": {
+    "split": "val",
+    "category": "good",
+    "score": 2.007761240005493
+  },
+  "train/good/066": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9813406467437744
+  },
+  "train/good/072": {
+    "split": "val",
+    "category": "good",
+    "score": 2.07442569732666
+  },
+  "train/good/088": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9542803764343262
+  },
+  "train/good/103": {
+    "split": "val",
+    "category": "good",
+    "score": 1.899971604347229
+  },
+  "train/good/104": {
+    "split": "val",
+    "category": "good",
+    "score": 1.661759376525879
+  },
+  "train/good/105": {
+    "split": "val",
+    "category": "good",
+    "score": 1.795874834060669
+  },
+  "train/good/106": {
+    "split": "val",
+    "category": "good",
+    "score": 1.926516056060791
+  },
+  "train/good/109": {
+    "split": "val",
+    "category": "good",
+    "score": 1.949062705039978
+  },
+  "train/good/113": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9144411087036133
+  },
+  "train/good/118": {
+    "split": "val",
+    "category": "good",
+    "score": 1.8613296747207642
+  },
+  "train/good/123": {
+    "split": "val",
+    "category": "good",
+    "score": 1.8335188627243042
+  },
+  "train/good/127": {
+    "split": "val",
+    "category": "good",
+    "score": 1.7467337846755981
+  },
+  "train/good/144": {
+    "split": "val",
+    "category": "good",
+    "score": 1.7647098302841187
+  },
+  "train/good/146": {
+    "split": "val",
+    "category": "good",
+    "score": 2.0093650817871094
+  },
+  "train/good/147": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9779670238494873
+  },
+  "train/good/175": {
+    "split": "val",
+    "category": "good",
+    "score": 1.9893616437911987
+  },
+  "train/good/176": {
+    "split": "val",
+    "category": "good",
+    "score": 2.016765832901001
+  },
+  "train/good/195": {
+    "split": "val",
+    "category": "good",
+    "score": 1.79707932472229
+  },
+  "train/good/203": {
+    "split": "val",
+    "category": "good",
+    "score": 1.8494969606399536
+  },
+  "test/bent/005": {
+    "split": "test",
+    "category": "bent",
+    "score": 3.061725378036499
+  },
+  "test/bent/006": {
+    "split": "test",
+    "category": "bent",
+    "score": 2.5149929523468018
+  },
+  "test/bent/009": {
+    "split": "test",
+    "category": "bent",
+    "score": 3.074965000152588
+  },
+  "test/bent/010": {
+    "split": "test",
+    "category": "bent",
+    "score": 3.226362943649292
+  },
+  "test/bent/012": {
+    "split": "test",
+    "category": "bent",
+    "score": 2.9254214763641357
+  },
+  "test/bent/016": {
+    "split": "test",
+    "category": "bent",
+    "score": 2.9191484451293945
+  },
+  "test/bent/018": {
+    "split": "test",
+    "category": "bent",
+    "score": 2.797238349914551
+  },
+  "test/bent/019": {
+    "split": "test",
+    "category": "bent",
+    "score": 2.8532533645629883
+  },
+  "test/color/004": {
+    "split": "test",
+    "category": "color",
+    "score": 2.2486495971679688
+  },
+  "test/color/007": {
+    "split": "test",
+    "category": "color",
+    "score": 3.0149433612823486
+  },
+  "test/color/011": {
+    "split": "test",
+    "category": "color",
+    "score": 3.0584568977355957
+  },
+  "test/color/014": {
+    "split": "test",
+    "category": "color",
+    "score": 3.2763376235961914
+  },
+  "test/color/015": {
+    "split": "test",
+    "category": "color",
+    "score": 2.697392225265503
+  },
+  "test/color/017": {
+    "split": "test",
+    "category": "color",
+    "score": 2.6959104537963867
+  },
+  "test/color/019": {
+    "split": "test",
+    "category": "color",
+    "score": 2.732168436050415
+  },
+  "test/flip/005": {
+    "split": "test",
+    "category": "flip",
+    "score": 3.1967453956604004
+  },
+  "test/flip/007": {
+    "split": "test",
+    "category": "flip",
+    "score": 3.1322476863861084
+  },
+  "test/flip/008": {
+    "split": "test",
+    "category": "flip",
+    "score": 3.2761964797973633
+  },
+  "test/flip/015": {
+    "split": "test",
+    "category": "flip",
+    "score": 3.2506604194641113
+  },
+  "test/flip/018": {
+    "split": "test",
+    "category": "flip",
+    "score": 3.2092339992523193
+  },
+  "test/flip/019": {
+    "split": "test",
+    "category": "flip",
+    "score": 3.167558193206787
+  },
+  "test/flip/020": {
+    "split": "test",
+    "category": "flip",
+    "score": 3.0756683349609375
+  },
+  "test/good/000": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9182928800582886
+  },
+  "test/good/001": {
+    "split": "test",
+    "category": "good",
+    "score": 1.8253695964813232
+  },
+  "test/good/009": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9325311183929443
+  },
+  "test/good/014": {
+    "split": "test",
+    "category": "good",
+    "score": 1.7733336687088013
+  },
+  "test/scratch/000": {
+    "split": "test",
+    "category": "scratch",
+    "score": 2.2693004608154297
+  },
+  "test/scratch/001": {
+    "split": "test",
+    "category": "scratch",
+    "score": 2.3313183784484863
+  },
+  "test/scratch/009": {
+    "split": "test",
+    "category": "scratch",
+    "score": 2.7609686851501465
+  },
+  "test/scratch/012": {
+    "split": "test",
+    "category": "scratch",
+    "score": 2.7543094158172607
+  },
+  "test/scratch/013": {
+    "split": "test",
+    "category": "scratch",
+    "score": 2.9354355335235596
+  },
+  "test/scratch/014": {
+    "split": "test",
+    "category": "scratch",
+    "score": 2.708195924758911
+  },
+  "test/scratch/020": {
+    "split": "test",
+    "category": "scratch",
+    "score": 2.2056021690368652
+  },
+  "train/good/011": {
+    "split": "test",
+    "category": "good",
+    "score": 1.8146154880523682
+  },
+  "train/good/019": {
+    "split": "test",
+    "category": "good",
+    "score": 1.971677541732788
+  },
+  "train/good/022": {
+    "split": "test",
+    "category": "good",
+    "score": 2.282416820526123
+  },
+  "train/good/033": {
+    "split": "test",
+    "category": "good",
+    "score": 1.912017583847046
+  },
+  "train/good/034": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9414499998092651
+  },
+  "train/good/036": {
+    "split": "test",
+    "category": "good",
+    "score": 1.770510196685791
+  },
+  "train/good/037": {
+    "split": "test",
+    "category": "good",
+    "score": 1.7103549242019653
+  },
+  "train/good/038": {
+    "split": "test",
+    "category": "good",
+    "score": 1.7670871019363403
+  },
+  "train/good/044": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9598356485366821
+  },
+  "train/good/046": {
+    "split": "test",
+    "category": "good",
+    "score": 1.968924880027771
+  },
+  "train/good/047": {
+    "split": "test",
+    "category": "good",
+    "score": 1.979990005493164
+  },
+  "train/good/049": {
+    "split": "test",
+    "category": "good",
+    "score": 1.878527045249939
+  },
+  "train/good/053": {
+    "split": "test",
+    "category": "good",
+    "score": 2.267340898513794
+  },
+  "train/good/071": {
+    "split": "test",
+    "category": "good",
+    "score": 1.821331262588501
+  },
+  "train/good/074": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9032413959503174
+  },
+  "train/good/081": {
+    "split": "test",
+    "category": "good",
+    "score": 1.6629010438919067
+  },
+  "train/good/091": {
+    "split": "test",
+    "category": "good",
+    "score": 2.0388734340667725
+  },
+  "train/good/100": {
+    "split": "test",
+    "category": "good",
+    "score": 1.83351731300354
+  },
+  "train/good/114": {
+    "split": "test",
+    "category": "good",
+    "score": 1.8935091495513916
+  },
+  "train/good/122": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9233288764953613
+  },
+  "train/good/131": {
+    "split": "test",
+    "category": "good",
+    "score": 1.791904091835022
+  },
+  "train/good/133": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9900556802749634
+  },
+  "train/good/143": {
+    "split": "test",
+    "category": "good",
+    "score": 1.8922410011291504
+  },
+  "train/good/148": {
+    "split": "test",
+    "category": "good",
+    "score": 2.019176959991455
+  },
+  "train/good/154": {
+    "split": "test",
+    "category": "good",
+    "score": 1.8896199464797974
+  },
+  "train/good/156": {
+    "split": "test",
+    "category": "good",
+    "score": 2.080172061920166
+  },
+  "train/good/157": {
+    "split": "test",
+    "category": "good",
+    "score": 2.163616418838501
+  },
+  "train/good/165": {
+    "split": "test",
+    "category": "good",
+    "score": 1.887710690498352
+  },
+  "train/good/169": {
+    "split": "test",
+    "category": "good",
+    "score": 2.0446527004241943
+  },
+  "train/good/171": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9061338901519775
+  },
+  "train/good/172": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9466743469238281
+  },
+  "train/good/185": {
+    "split": "test",
+    "category": "good",
+    "score": 1.8756183385849
+  },
+  "train/good/192": {
+    "split": "test",
+    "category": "good",
+    "score": 1.7364857196807861
+  },
+  "train/good/197": {
+    "split": "test",
+    "category": "good",
+    "score": 2.0204734802246094
+  },
+  "train/good/199": {
+    "split": "test",
+    "category": "good",
+    "score": 1.9522126913070679
+  },
+  "train/good/201": {
+    "split": "test",
+    "category": "good",
+    "score": 2.044092893600464
+  }
+}

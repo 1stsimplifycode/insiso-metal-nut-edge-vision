@@ -1,0 +1,16 @@
+{
+  "images": 69,
+  "conf": 0.11,
+  "raw_box_rows_max_abs_diff_px": 0.0032958984375,
+  "raw_score_rows_max_abs_diff": 1.004338264465332e-05,
+  "raw_output_mean_abs_diff": 2.4625715857415553e-05,
+  "raw_atol_box_px": 0.01,
+  "raw_atol_score": 0.0001,
+  "raw_pass": true,
+  "matched_detections": 49,
+  "detection_score_max_abs_diff": 1.043081283569336e-06,
+  "detection_box_max_abs_diff_px": 0.000213623046875,
+  "images_with_detection_count_mismatch": [],
+  "note": "raw outputs are compared on identical preprocessed tensors; detection-level differences can additionally arise from threshold-boundary scores and NMS tie-breaking.",
+  "detection_pass": true
+}
