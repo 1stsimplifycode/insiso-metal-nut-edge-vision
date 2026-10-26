@@ -67,8 +67,10 @@ def main() -> None:
           f"normal {r['n_normal_images']}), GT boxes={r['n_gt_boxes']}")
     print(f"  box  P={b['precision']:.3f} R={b['recall']:.3f} F1={b['f1']:.3f} (TP {b['tp']} FP {b['fp']} FN {b['fn']})"
           f"  mAP50={r['mAP50']:.3f} mAP50-95={r['mAP50_95']:.3f}")
+    fpn = r["fp_boxes_per_normal_image"]  # None when the split has no normal images (e.g. `unseen`)
     print(f"  image sensitivity {i['defective_flagged']}/{i['defective_total']}  "
-          f"FPR {i['normal_flagged']}/{i['normal_total']}  FP boxes/normal img {r['fp_boxes_per_normal_image']:.3f}")
+          f"FPR {i['normal_flagged']}/{i['normal_total']}  FP boxes/normal img "
+          + ("n/a" if fpn is None else f"{fpn:.3f}"))
     for c, v in sorted(r["per_category"].items()):
         print(f"  {c:8s} box recall {v['tp_boxes']}/{v['gt_boxes']}  images flagged {v['flagged']}/{v['images']}")
     print(f"  recall by size: { {k: f'{v['tp']}/{v['gt']}' for k, v in r['recall_by_size'].items()} }")

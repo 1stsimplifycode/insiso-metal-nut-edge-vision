@@ -119,6 +119,13 @@ model lost one colour defect completely (`color_004`, score 0.001), and decision
 improve (28/29 vs 29/29). That is within noise on 29 images, so the conclusion is "no evidence of benefit",
 not "it is worse". Hiding it would make E1 look like the only thing I tried.
 
+**19c. What happens with a defect type the detector has never seen?**
+I measured it: I held out all 23 `scratch` images and retrained with everything else unchanged. With the
+threshold chosen on validation (0.51), it rejected only 3/23 scratched nuts (95% CI 2.8–34%), while seen
+types on test stayed at 20/22 with 0/40 good rejected. 16 of the 23 scratches scored ≤ 0.02, so no threshold
+would rescue it. A supervised detector learns the defects it was shown. That is why my answer to question A
+puts a normal-only anomaly model first; PatchCore flagged 7/7 test scratches without ever seeing a defect.
+
 ## Deployment
 
 **20. How did you verify the ONNX model is correct?**

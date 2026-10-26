@@ -286,20 +286,38 @@ checkpoint, threshold re-chosen on val for each variant, latency from an *interl
   320 px, at an accuracy cost (written answer C).
 
 ### 13a. Unseen defect type (leave `scratch` out) [`artifacts/eval/loco_scratch_*`]
-**Status: not completed.**
+**Status: completed** (150 epochs; interrupted once by low memory at about epoch 25 and resumed from
+`last.pt` with workers 0, as for the other runs).
 
 * **Protocol, fixed before training.** All 23 `scratch` images are removed from train/val and held out as an
   `unseen` split. Every other image keeps exactly its main-split assignment (verified: 0 differences)
-  [`manifests/split_seed42_loco_scratch.csv`]. The threshold would come from val (which contains no scratch)
-  by the recall-first rule.
-* **What happened.** Training was stopped at about epoch 25 of 150 when the laptop ran short of memory. The
-  checkpoint is resumable (`python scripts/train.py --config configs/loco_scratch.yaml --resume`).
-* **No result is reported.**
+  [`manifests/split_seed42_loco_scratch.csv`]. Same config as the baseline. Checkpoint selected on val
+  (epoch 132); threshold chosen on val (which contains no scratch) by the recall-first rule.
+* **Threshold.** The rule gives **0.51**, not 0.11 as for the baseline, because one good validation part
+  scored 0.509 with this model. The safety margin is again one score step.
 
-What it could and could not show: generalisation of a supervised detector to a defect *type* absent from
-training, on the same parts, camera and lighting. It would **not** show generalisation to new parts or
-stations. The normal-only PatchCore baseline is unseen-type by construction and flagged 7/7 test scratches
-at the recall-first threshold.
+| LOCO model (no scratch in training), threshold 0.51 from val | Defective rejected | Good rejected | Box P / R | mAP@0.5 |
+|---|---|---|---|---|
+| val (bent, color, flip + good) | 11/14 | 0/30 | 0.833 / 0.588 | 0.703 |
+| test, seen types (bent, color, flip + good) | 20/22 (91% [71%, 99%]) | 0/40 ([0%, 8.8%]) | 0.905 / 0.655 | 0.740 |
+| **unseen: all 23 scratch images** | **3/23 (13% [2.8%, 34%])** | — | 1.000 / 0.068 | 0.216 |
+
+* **Finding: the supervised detector does not transfer to a defect type it never saw.** Only 3 of 23 scratched
+  nuts would be rejected; 41 of 44 scratch boxes are missed.
+* **It is not a threshold problem.** Descriptively (not used for any choice), 16 of 23 scratch images have a
+  top score ≤ 0.02, and 10 have no prediction at all above 0.001; even at 0.05 only 7/23 would be flagged
+  [`artifacts/eval/loco_scratch_unseen_score_profile.json`, from `tools/loco_score_profile.py`]. The model
+  learned "what bent, discoloured and flipped nuts look like", not "what is unlike a good nut".
+* **Contrast with the normal-only baseline.** PatchCore never sees any defect label, so every defect type is
+  unseen for it. It flagged 7/7 scratch images in the main test split (§13). It was not run on the 16
+  scratch images that sit in the main train/val splits, so the two numbers are not on identical images.
+* **Seen types are also weaker** (20/22 vs 22/22 for the baseline on the same non-scratch test images at its
+  own threshold). The LOCO model trained on 34 instead of 45 defect images and has a higher val threshold;
+  with one run per configuration this difference is not significant.
+
+What it can and cannot show: on the same parts, camera and lighting, a supervised detector misses most of a
+defect type absent from training. It does **not** show anything about new parts or stations. This is the
+measured basis for written answer A's recommendation to use a normal-only gate as the primary reject trigger.
 
 ## 14. Limitations
 * **Data.** One public dataset and one imaging setup, so nothing is known about other cameras, lighting,

@@ -22,6 +22,7 @@ with the operating threshold chosen on the validation split only.
 | **Baseline + E1 recall-first rule (deployed)** | **0.11** | **29/29** (95% CI 88–100%) | **0/40** (95% CI 0–8.8%) | 0.694 / 0.850 | 0.856 | 0.554 |
 | E2 merged-fragment labels (not adopted) | 0.05 | 28/29 | 0/40 | 0.744 / 0.800 | 0.798 | 0.526 |
 | PatchCore normal-only (no defect labels), recall-first | — | 29/29 | 4/40 | image AUROC 0.996 | — | — |
+| LOCO: detector trained **without `scratch`**, tested on all 23 scratch images | 0.51 | **3/23** | — | 1.000 / 0.068 | 0.216 | 0.123 |
 
 | Deployment (Ryzen 5 5600H laptop CPU, ONNX Runtime, batch 1) | Model ms | End-to-end ms | Size |
 |---|---|---|---|

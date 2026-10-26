@@ -12,7 +12,8 @@ primary safety mechanism.
 
 **Proposed system.** (1) *Primary gate: normal-only anomaly detection.* Fit a PatchCore-style memory bank
 of pretrained CNN patch features on ~2,500 of the good images (keep ~500 good images untouched for
-calibration and testing). It needs no defect labels and responds to defect types nobody has seen yet.
+calibration and testing). It needs no defect labels and responds to defect types nobody has seen yet. (Measured here: a detector
+retrained without the `scratch` type rejected only 3/23 scratched nuts, most scoring ≤ 0.02; REPORT §13a.)
 (2) *Secondary: defect localisation/classification.* Fine-tune a small pretrained detector (transfer
 learning from COCO/ImageNet) on the 30 defects plus good images, used to explain *where* and *what*,
 not as the only reject trigger. (3) *Human review band.* Scores between a "certain pass" and

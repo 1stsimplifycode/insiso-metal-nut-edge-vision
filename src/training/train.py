@@ -57,20 +57,24 @@ def train(cfg: dict, root: Path, device: str | None = None, resume: bool = False
                     deterministic=cfg["deterministic"], workers=cfg["workers"], device=device,
                     project=str(project), name=cfg["name"], exist_ok=True, plots=True, verbose=False,
                     single_cls=cfg.get("single_cls", False), **cfg["augment"])
-    dur = time.time() - t0
+    return summarize_run(cfg, root, run_dir, device, round(time.time() - t0, 1))
 
+
+def summarize_run(cfg: dict, root: Path, run_dir: Path, device: str, train_seconds) -> dict:
+    """Write train_summary.json and copy best.pt to models/. Uses the csv module, not pandas
+    (a pandas DLL was once blocked by Windows Application Control after a 150-epoch run)."""
+    import csv
     best = run_dir / "weights" / "best.pt"
     results_csv = run_dir / "results.csv"
-    summary = {"config": cfg, "device": device, "train_seconds": round(dur, 1),
+    summary = {"config": cfg, "device": device, "train_seconds": train_seconds,
                "environment": environment_info(), "best_checkpoint": str(best.relative_to(root))}
     if results_csv.exists():
-        import pandas as pd
-        df = pd.read_csv(results_csv)
-        df.columns = [c.strip() for c in df.columns]
-        fit = 0.1 * df["metrics/mAP50(B)"] + 0.9 * df["metrics/mAP50-95(B)"]
-        i = int(fit.idxmax())
-        summary.update({"epochs_run": int(df["epoch"].iloc[-1]), "selected_epoch": int(df["epoch"].iloc[i]),
-                        "val_at_selected_epoch": {k: float(df[k].iloc[i]) for k in df.columns if k.startswith("metrics/")}})
+        with open(results_csv, newline="") as f:
+            rows = [{k.strip(): v for k, v in r.items()} for r in csv.DictReader(f)]
+        fit = [0.1 * float(r["metrics/mAP50(B)"]) + 0.9 * float(r["metrics/mAP50-95(B)"]) for r in rows]
+        i = max(range(len(rows)), key=fit.__getitem__)
+        summary.update({"epochs_run": int(float(rows[-1]["epoch"])), "selected_epoch": int(float(rows[i]["epoch"])),
+                        "val_at_selected_epoch": {k: float(v) for k, v in rows[i].items() if k.startswith("metrics/")}})
     models = root / "models"
     models.mkdir(exist_ok=True)
     if best.exists():

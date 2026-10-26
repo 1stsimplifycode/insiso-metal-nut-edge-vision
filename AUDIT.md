@@ -8,9 +8,10 @@ PASS requires execution or verification evidence, not just the existence of code
 | Dataset integrity | **PARTIAL** | All counts match MVTec's published numbers; 0 missing, invalid or orphan files; no duplicates (`reports/dataset_audit.md`). Byte-identity with the official archive is unverified. |
 | Leakage-free split | **PASS** | Source-level, seed 42, SHA-256 frozen; disjointness asserted in tests; augmentation only inside training. |
 | Annotation correctness | **PASS** | 28/28 tests, including full mask-pixel coverage on real data; visual QA panels inspected. |
-| Model training | **PASS** (with disclosure) | Baseline and E2 trained 150 epochs each; both interrupted by low memory and resumed from checkpoints (workers 2→0). |
+| Model training | **PASS** (with disclosure) | Baseline, E2 and LOCO trained 150 epochs each; all three interrupted by low memory and resumed from checkpoints (workers 0). |
 | Held-out metrics | **PASS** | Threshold chosen on val and enforced by code; COCO AP unit-tested; Ultralytics cross-check gap disclosed (0.856 vs 0.834). |
 | Failure analysis | **PASS** | 15 real errors at the max-F1 point and 21 at E1, auto-classified; 5 cases written up; panels generated from predictions. |
+| Unseen defect type (LOCO) | **PASS** | `scratch` held out: 3/23 flagged at the val threshold (0.51); 16/23 score ≤ 0.02, so not a threshold effect. Seen types on test: 20/22, 0/40 (REPORT §13a). One run, no seed repeats. |
 | Improvement experiment | **PASS** (with disclosure) | E1 (threshold rule) improves escapes from 6 to 0; E2 (labels) is neutral to negative and reported. The test set informed the decision to revisit the threshold rule. No seed repeats. |
 | ONNX export | **PASS** | `onnx.checker` passes; I/O contract in `models/*.onnx.json`. The shipped baseline file is a graph-identical re-export (disclosed). |
 | ONNX parity | **PASS** | Raw and detection-level parity on 69 images for both models; ONNX test metrics identical to PyTorch. |
@@ -32,9 +33,10 @@ PASS requires execution or verification evidence, not just the existence of code
 | 7 | Demo defaulted to the superseded max-F1 threshold | `scripts/run_inspection.py` | prefers the recall-first file, prints its source | demo: 29 REJECT / 40 PASS |
 | 8 | JSONL sink crashed when its folder was missing | `controller_adapter.py` | create parent folder | demo run OK |
 | 9 | Leave-one-out split would have reshuffled good images | `src/dataset/split.py` | consume RNG for the excluded class | 0 assignment differences |
+| 10 | Post-training summary crashed: Windows Application Control blocked a pandas DLL (after all 150 LOCO epochs) | `src/training/train.py` | summary uses the `csv` module; `scripts/train.py --summarize-only` | `train_summary.json` written; device read from the run's `args.yaml` |
+| 11 | `evaluate.py` crashed printing FP/normal-image on a split with no good images | `scripts/evaluate.py` | prints `n/a` | unseen evaluation re-run |
 
 ## Not done / open
-* Leave-one-category-out training stopped by low memory at about epoch 25 (resumable); no result reported.
 * Seed repeats (`scripts/run_seeds.py` is ready).
 * Synthetic robustness test (Challenge F); webcam and video inputs; real controller integration.
 * Verification against the official MVTec archive (needs the user to fill MVTec's download form).
