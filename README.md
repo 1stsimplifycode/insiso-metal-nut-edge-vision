@@ -134,6 +134,17 @@ python scripts/run_inspection.py --source 0                               # webc
 The demo outputs PASS, REJECT, or optional REVIEW (`--review-conf`). Each frame also produces one JSON line through a
 **simulated** controller adapter (`src/inspection/controller_adapter.py`, untested on any PLC or ctrlX hardware).
 
+### Web demo (Render)
+`app/server.py` wraps the same detector, threshold and decision policy in a small FastAPI app: upload an image,
+get PASS/REJECT/REVIEW, the annotated frame and the controller JSON. `POST /api/inspect` (multipart `file`,
+optional `?review_conf=`), `GET /health`.
+```bash
+pip install -r requirements-web.txt
+uvicorn app.server:app --port 8000
+```
+`render.yaml` is a Render Blueprint (free plan, CPU, 1 ORT thread). Latency on shared hosting is not
+comparable with the benchmarks above.
+
 ### Failure cases
 `reports/failures/<model>_test/failures.md`: auto-generated table and panels showing ground truth, predictions above
 and below threshold, a zoomed crop, error type, confidence, IoU, box size and local contrast. Interpretation is in

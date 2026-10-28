@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metal-nut inspection</title>
+<style>
+  :root { --bg:#f6f7f9; --fg:#1b1f24; --muted:#5b6470; --card:#fff; --line:#d8dde3; --accent:#2457d6;
+          --pass:#1a8f3c; --reject:#c62828; --review:#c77700; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171b; --fg:#e7eaee; --muted:#9aa3ae; --card:#1d2126; --line:#323840; --accent:#6f9bff; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 system-ui, sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; }
+  p.sub { color:var(--muted); margin:0 0 20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; margin-bottom:16px; }
+  label.drop { display:block; border:2px dashed var(--line); border-radius:8px; padding:28px; text-align:center;
+               cursor:pointer; color:var(--muted); }
+  label.drop.over { border-color:var(--accent); color:var(--accent); }
+  input[type=file] { display:none; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px; }
+  button { font:inherit; padding:6px 12px; border-radius:6px; border:1px solid var(--line); background:var(--bg);
+           color:var(--fg); cursor:pointer; }
+  button:hover { border-color:var(--accent); }
+  .verdict { font-size:1.6rem; font-weight:700; }
+  .PASS { color:var(--pass); } .REJECT { color:var(--reject); } .REVIEW { color:var(--review); }
+  img#out { max-width:100%; border-radius:6px; display:block; margin-top:12px; }
+  pre { overflow:auto; font-size:12px; background:var(--bg); padding:10px; border-radius:6px; }
+  .muted { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Metal-nut defect inspection</h1>
+  <p class="sub">YOLO11n on ONNX Runtime (CPU) · model <code>{{MODEL}}</code> · input {{RES}} ·
+     reject threshold {{THR}} (recall-first, chosen on validation). Research prototype, not a validated QC system.</p>
+
+  <div class="card">
+    <label class="drop" id="drop">Drop an image here or click to choose (PNG/JPEG, max 10 MB)
+      <input type="file" id="file" accept="image/png,image/jpeg">
+    </label>
+    <p class="muted">Use an MVTec AD <code>metal_nut</code> image (raw, not an annotated output). The dataset is not bundled here (CC BY-NC-SA 4.0).</p>
+    <div class="row">
+      <label><input type="checkbox" id="review"> REVIEW band from</label>
+      <input type="number" id="reviewConf" value="0.05" min="0" max="1" step="0.01" style="width:5em">
+    </div>
+  </div>
+
+  <div class="card" id="result" hidden>
+    <div class="verdict" id="verdict"></div>
+    <div class="muted" id="meta"></div>
+    <img id="out" alt="Annotated inspection result">
+    <details><summary>Controller message (JSON)</summary><pre id="json"></pre></details>
+  </div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+async function run(blob, name) {
+  const fd = new FormData();
+  fd.append("file", blob, name);
+  const q = $("review").checked ? "?review_conf=" + encodeURIComponent($("reviewConf").value) : "";
+  $("result").hidden = false;
+  $("verdict").textContent = "Inspecting…"; $("verdict").className = "verdict";
+  $("meta").textContent = ""; $("out").removeAttribute("src");
+  try {
+    const r = await fetch("/api/inspect" + q, { method: "POST", body: fd });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.detail || r.statusText);
+    $("verdict").textContent = j.decision; $("verdict").className = "verdict " + j.decision;
+    $("meta").textContent = `${name} · max confidence ${j.max_confidence} · ${j.detections.length} box(es) · ` +
+      `${j.processing_ms} ms server-side (model ${j.timings_ms.inference} ms)`;
+    $("out").src = "data:image/jpeg;base64," + j.annotated_jpeg_base64;
+    const { annotated_jpeg_base64, ...msg } = j;
+    $("json").textContent = JSON.stringify(msg, null, 2);
+  } catch (e) {
+    $("verdict").textContent = "Error: " + e.message;
+  }
+}
+$("file").addEventListener("change", e => { const f = e.target.files[0]; if (f) run(f, f.name); });
+const drop = $("drop");
+["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", e => { const f = e.dataTransfer.files[0]; if (f) run(f, f.name); });
+</script>
+</body>
+</html>
